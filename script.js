@@ -20,7 +20,7 @@ const calculateSum = (dob) => {
 }
 
 const clickHandler = () => {
-    if(bday.value && luckyNumber.value) {
+    if((bday.value && luckyNumber.value) && Number(luckyNumber.value) > 0) {
         const dob = bday.value.replaceAll('-','');
         const sum = calculateSum(dob);
         if(sum && dob) {
